@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndigoTex</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#performance">Performance</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="welcome-message">
+            <h1>Welcome to IndigoTex</h1>
+            <p>Your trusted partner in sustainable textile innovation.</p>
+        </div>
+        <div class="feature-image">
+            <img src="images/feature-image.jpg" alt="Feature Image">
+        </div>
+        <div class="usps">
+            <div class="usp">
+                <h3>Quality Assurance</h3>
+                <p>Top-notch quality products.</p>
+            </div>
+            <div class="usp">
+                <h3>Sustainability</h3>
+                <p>Commitment to a better future.</p>
+            </div>
+            <div class="usp">
+                <h3>Innovative Designs</h3>
+                <p>Leading the market in textile innovations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <p><strong>Who We Are:</strong> IndigoTex is a leading textile company committed to sustainable innovation.</p>
+            <p><strong>Company History:</strong> Our journey began over two decades ago, pioneering quality in textile manufacturing.</p>
+            <p><strong>Mission and Vision:</strong> We aim to revolutionize the textile industry with sustainable practices and cutting-edge designs.</p>
+            <h3>Meet Our Team</h3>
+            <p>Our team consists of industry experts dedicated to driving sustainable change.</p>
+            <h3>Our Values</h3>
+            <p><strong>Core Values:</strong> Quality, Sustainability, Innovation, Integrity</p>
+            <h4>Commitment to Sustainability</h4>
+            <p>We adhere to the 3 Pillars of Sustainability: Economic, Environmental, and Social Responsibility.</p>
+            <p><strong>Sustainability Initiatives:</strong> Reducing waste, recycling materials, and using eco-friendly dyes.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-catalogue">
+            <div class="fabric-category">
+                <h3>Denim</h3>
+                <p>High-quality, durable denim for all purposes.</p>
+            </div>
+            <div class="fabric-category">
+                <h3>Wool</h3>
+                <p>Warm, comfortable wool fabrics.</p>
+            </div>
+            <div class="fabric-category">
+                <h3>Organic Cotton</h3>
+                <p>Soft, breathable organic cotton.</p>
+            </div>
+        </div>
+        <h3>Why Choose Us?</h3>
+        <ul>
+            <li>Expert craftsmanship</li>
+            <li>Commitment to sustainability</li>
+            <li>Innovative designs</li>
+            <li>Global distribution</li>
+        </ul>
+    </section>
+
+    <!-- Performance Section -->
+    <section id="performance">
+        <h2>Performance</h2>
+        <div class="performance-details">
+            <p><strong>From the Fiber:</strong> The Foundation of Our Fabrics</p>
+            <p><strong>Thermal Insulation:</strong> Warmth Without the Weight</p>
+            <p><strong>Properties of Wool Denim:</strong> Strength and Comfort Combined</p>
+            <p><strong>Functionality of Wool Denim:</strong> Versatility for Extreme Conditions</p>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div class="contact-info">
+            <p><strong>Company Address:</strong> 123 Textile Lane, Fabric City</p>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p>Follow us on social media:</p>
+            <ul class="social-media">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 IndigoTex. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+        </ul>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script>
+        // GSAP animations
+        gsap.from("header nav ul li", {
+            duration: 1,
+            y: -50,
+            opacity: 0,
+            stagger: 0.2,
+            ease: "back"
+        });
+
+        gsap.from(".welcome-message h1", {
+            duration: 1,
+            x: -200,
+            opacity: 0,
+            ease: "power4"
+        });
+
+        gsap.from(".welcome-message p", {
+            duration: 1.5,
+            x: 200,
+            opacity: 0,
+            ease: "power4"
+        });
+
+        gsap.from(".feature-image img", {
+            duration: 2,
+            opacity: 0,
+            scale: 0.8,
+            ease: "elastic"
+        });
+
+        gsap.from(".usp", {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            stagger: 0.3,
+            ease: "power2"
+        });
+
+        // Parallax effect on scroll
+        window.addEventListener('scroll', function () {
+            const parallax = document.querySelector('.feature-image img');
+            let scrollPosition = window.pageYOffset;
+            parallax.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
+        });
+
+        gsap.from("#about h2", {
+            scrollTrigger: {
+                trigger: "#about",
+                start: "top 80%"
+            },
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            ease: "power4"
+        });
+
+        gsap.from(".fabric-category", {
+            scrollTrigger: {
+                trigger: ".fabric-category",
+                start: "top 80%"
+            },
+            duration: 1,
+            x: -200,
+            opacity: 0,
+            stagger: 0.3,
+            ease: "power2"
+        });
+
+        gsap.from(".performance-details p", {
+            scrollTrigger: {
+                trigger: ".performance-details p",
+                start: "top 80%"
+            },
+            duration: 1,
+            x: 200,
+            opacity: 0,
+            stagger: 0.3,
+            ease: "power2"
+        });
+    </script>
+</body>
+
+</html>

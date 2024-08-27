@@ -1,0 +1,246 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background-color: #003366;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9900;
+}
+
+/* Section Styles */
+section {
+    padding: 100px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#home {
+    background: url('../images/home-bg.jpg') no-repeat center center/cover;
+    color: white;
+    position: relative;
+}
+
+.welcome-message {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    margin-top: 150px;
+}
+
+.feature-image {
+    margin: 50px 0;
+}
+
+.feature-image img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.usps {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.usp {
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#about {
+    background-color: #e6f2ff;
+}
+
+.about-content {
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+}
+
+#products {
+    background-color: #cce7ff;
+}
+
+.product-catalogue {
+    display: flex;
+    justify-content: space-around;
+}
+
+.fabric-category {
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#performance {
+    background-color: #b3daff;
+}
+
+.performance-details {
+    text-align: left;
+    max-width: 800px;
+    margin: auto;
+}
+
+#contact {
+    background-color: #99ccff;
+}
+
+.contact-form {
+    display: inline-block;
+    text-align: left;
+    width: 45%;
+    vertical-align: top;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #ff9900;
+}
+
+.contact-info {
+    display: inline-block;
+    width: 45%;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.social-media li {
+    margin-right: 15px;
+}
+
+.social-media li a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.social-media li a:hover {
+    color: #ff9900;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #ff9900;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .usps,
+    .product-catalogue {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .usp,
+    .fabric-category {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .contact-form,
+    .contact-info {
+        width: 100%;
+    }
+
+    .contact-info {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+}
